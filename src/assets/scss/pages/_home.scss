@@ -1,0 +1,33 @@
+.top {
+  position: relative;
+  padding: 166px 0;
+  margin-bottom: 80px;
+
+  &__inner {
+    max-width: 482px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-bottom: 56px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 83px ;
+  }
+}
+
+.about {
+  margin-bottom: 210px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

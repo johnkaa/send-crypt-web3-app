@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import AtomLogo from './components/atoms/AtomLogo.vue'
+import DefaultTemplate from '@/components/templates/DefaultTemplate.vue'
 </script>
 
 <template>
-  <AtomLogo />
+  <DefaultTemplate>
+    <router-view />
+  </DefaultTemplate>
 </template>
 
-<style lang="scss" scoped>
-@import '@/assets/scss/main.scss';
+<style lang="scss">
+@import '@/assets/scss/main';
 </style>

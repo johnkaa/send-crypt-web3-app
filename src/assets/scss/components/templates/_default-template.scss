@@ -1,0 +1,11 @@
+@import "@/assets/scss/variables/colors";
+
+.default-template {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    flex: 1 1 auto;
+  }
+}

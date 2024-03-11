@@ -1,1 +1,32 @@
-// @import '~/reset-css/sass/_reset.scss';
+@import "@/assets/scss/variables/colors";
+@import "@/assets/scss/variables/fonts";
+@import "@/assets/scss/variables/scrollbar";
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $black;
+  color: $gray;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

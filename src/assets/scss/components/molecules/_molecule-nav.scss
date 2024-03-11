@@ -1,0 +1,9 @@
+.navbar {
+  &__list {
+    display: flex;
+
+    &-item + &-item {
+      margin-left: 32px;
+    }
+  }
+}

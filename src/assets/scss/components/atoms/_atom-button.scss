@@ -1,0 +1,18 @@
+@import "@/assets/scss/variables/base";
+@import "@/assets/scss/variables/colors";
+
+.button {
+  background-color: $yellow;
+  color: $black;
+  border-radius: $border-radius;
+  border: none;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: rgba(#F5C249, .7);
+  }
+}

@@ -1,0 +1,30 @@
+@import "@/assets/scss/variables/colors";
+
+.footer {
+  padding: 20px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__sm {
+    display: flex;
+    align-items: center;
+
+    &-item + &-item {
+      margin-left: 30px;
+    }
+
+    &-icon {
+      fill: $gray;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+  }
+}
