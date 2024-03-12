@@ -32,7 +32,15 @@ const aboutCards = [
           <AtomButton class="top__btn">Connect Wallet</AtomButton>
         </div>
 
-        <img class="top__img" src="/images/decor.png" width="527" height="502" alt="litecoin" />
+        <div class="top__decor">
+          <img
+            class="top__decor-img"
+            src="/images/decor.png"
+            width="527"
+            height="502"
+            alt="litecoin"
+          />
+        </div>
       </div>
     </div>
 
@@ -53,7 +61,19 @@ const aboutCards = [
     <div class="send">
       <div class="container">
         <div class="send__inner">
-          <form class="send__form"></form>
+          <div class="send__decor">
+            <img
+              class="send__decor-img"
+              src="/images/decor.png"
+              width="527"
+              height="502"
+              alt="litecoin"
+            />
+          </div>
+
+          <form class="send__form" @submit.prevent>
+            <AtomButton>Send Now</AtomButton>
+          </form>
         </div>
       </div>
     </div>

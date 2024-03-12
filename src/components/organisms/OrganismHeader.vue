@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import type { Link } from '@/pkg/types/link'
 import AtomLogo from '@/components/atoms/AtomLogo.vue'
 import MoleculeNav from '@/components/molecules/MoleculeNav.vue'
-import type { Link } from '@/pkg/types/link'
 import AtomButton from '@/components/atoms/AtomButton.vue'
+import MoleculeBurgerMenu from '@/components/molecules/MoleculeBurgerMenu.vue'
 
 const navLinks: Link[] = [
   {
@@ -27,11 +28,12 @@ const navLinks: Link[] = [
         <div class="header__left">
           <AtomLogo class="header__logo" />
 
-          <MoleculeNav :links="navLinks" />
+          <MoleculeNav class="header__nav" :links="navLinks" />
         </div>
 
         <div class="header__right">
           <AtomButton class="header__button">Connect Wallet</AtomButton>
+          <MoleculeBurgerMenu class="header__burger-menu" :links="navLinks" />
         </div>
       </div>
     </div>

@@ -5,5 +5,9 @@
     &-item + &-item {
       margin-left: 32px;
     }
+
+    &-link.router-link-active {
+      opacity: .7;
+    }
   }
 }

@@ -1,4 +1,12 @@
+@import "@/assets/scss/variables/colors";
+@import "@/assets/scss/variables/media-breakpoints";
+
 .header {
+  top: 0;
+  position: sticky;
+  background-color: $black;
+  z-index: 11;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -13,5 +21,20 @@
 
   &__logo {
     margin-right: 46px;
+    line-height: 0;
+    z-index: 11;
+  }
+
+  &__nav, &__button {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__burger-menu {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
   }
 }

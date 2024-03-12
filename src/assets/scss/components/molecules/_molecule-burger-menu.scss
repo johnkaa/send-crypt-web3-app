@@ -1,0 +1,42 @@
+@import "@/assets/scss/variables/colors";
+
+.burger-menu {
+  .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $black;
+    z-index: 10;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform .3s;
+
+    &__list {
+      padding: 110px 22px;
+
+      &-link {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1;
+        color: $white;
+        margin-bottom: 31px;
+        display: block;
+        border-radius: 8px;
+        transition: colore .3s, background-color .3s, padding .3s;
+
+        &.router-link-active, &:hover {
+          background-color: $yellow;
+          padding: 14px 22px;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &.active {
+    .navbar {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

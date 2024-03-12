@@ -1,3 +1,5 @@
+@import "@/assets/scss/variables/media-breakpoints";
+
 .top {
   position: relative;
   padding: 166px 0;
@@ -15,10 +17,15 @@
     margin-bottom: 56px;
   }
 
-  &__img {
+  &__decor {
     position: absolute;
     right: 0;
-    top: 83px ;
+    top: 83px;
+    z-index: -1;
+
+    &-img {
+      aspect-ratio: 0.5;
+    }
   }
 }
 
@@ -26,8 +33,28 @@
   margin-bottom: 210px;
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.send {
+  &__inner {
+    position: relative;
+  }
+
+  &__decor {
+    left: 0;
+    bottom: 0;
   }
 }
