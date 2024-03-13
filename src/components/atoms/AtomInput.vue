@@ -22,8 +22,9 @@ const value = useVModel(props, 'modelValue', emit)
 </script>
 
 <template>
-  <div class="atom-input">
+  <div class="input-wrapper">
     <input
+      class="input"
       v-model="value"
       :placeholder="props.placeholder"
       :type="props.type"

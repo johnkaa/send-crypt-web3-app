@@ -1,0 +1,27 @@
+@import "@/assets/scss/variables/base";
+@import "@/assets/scss/variables/colors";
+
+.transaction-card {
+  background-color: $light-black;
+  border-radius: 10px;
+  padding: 15px;
+
+  &__top {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    border-radius: $border-radius;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__date {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    white-space: nowrap;
+  }
+}

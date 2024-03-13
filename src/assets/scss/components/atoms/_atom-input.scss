@@ -1,0 +1,33 @@
+@import "@/assets/scss/variables/base";
+@import "@/assets/scss/variables/colors";
+
+.input-wrapper {
+
+}
+
+.input {
+  border: none;
+  border-radius: $border-radius;
+  background-color: $black;
+  color: $white;
+  padding: 16px;
+  width: 100%;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:focus {
+    outline: 1px solid $light-black;
+  }
+
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

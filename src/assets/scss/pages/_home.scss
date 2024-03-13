@@ -4,9 +4,23 @@
   position: relative;
   padding: 166px 0;
   margin-bottom: 80px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
 
   &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
     max-width: 482px;
+    @include media-breakpoint-down(sm) {
+      order: 2;
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -15,22 +29,23 @@
 
   &__text {
     margin-bottom: 56px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 16px;
+    }
   }
 
   &__decor {
-    position: absolute;
     right: 0;
     top: 83px;
-    z-index: -1;
-
-    &-img {
-      aspect-ratio: 0.5;
-    }
   }
 }
 
 .about {
   margin-bottom: 210px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 76px;
+  }
 
   &__inner {
     display: grid;
@@ -49,12 +64,65 @@
 }
 
 .send {
+  margin-bottom: 275px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 68px;
+  }
+
   &__inner {
     position: relative;
   }
 
   &__decor {
-    left: 0;
-    bottom: 0;
+    left: -30px;
+    bottom: -35px;
+  }
+
+  &__form {
+    margin-left: auto;
+  }
+}
+
+
+.top, .send {
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    @include media-breakpoint-down(md) {
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: inherit;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      left: unset;
+      transform: unset;
+      order: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-img {
+      @include media-breakpoint-down(md) {
+        max-width: 321px;
+        height: auto;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+.latest-transactions {
+  margin-bottom: 266px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 68px;
   }
 }

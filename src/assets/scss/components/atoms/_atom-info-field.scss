@@ -1,0 +1,13 @@
+@import "@/assets/scss/variables/colors";
+
+.info-field {
+  line-height: 1.2;
+  &__title {
+    font-weight: 500;
+  }
+
+  &__value {
+    color: $white;
+    font-weight: 600;
+  }
+}

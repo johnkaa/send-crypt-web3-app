@@ -2,6 +2,8 @@
 import AtomTitle from '@/components/atoms/AtomTitle.vue'
 import AtomButton from '@/components/atoms/AtomButton.vue'
 import MoleculeAboutCard from '@/components/molecules/MoleculeAboutCard.vue'
+import MoleculeSendForm from '@/components/molecules/MoleculeSendForm.vue'
+import OrganismLatestTransactions from '@/components/organisms/OrganismLatestTransactions.vue'
 
 const aboutCards = [
   {
@@ -27,19 +29,21 @@ const aboutCards = [
     <div class="top">
       <div class="container">
         <div class="top__inner">
-          <AtomTitle class="top__title" tag="h1">Start Sending Crypto Currency Easily</AtomTitle>
-          <p class="top__text">Join the world largest crypto exchange</p>
-          <AtomButton class="top__btn">Connect Wallet</AtomButton>
-        </div>
+          <div class="top__info">
+            <AtomTitle class="top__title" tag="h1">Start Sending Crypto Currency Easily</AtomTitle>
+            <p class="top__text">Join the world largest crypto exchange</p>
+            <AtomButton class="top__btn">Connect Wallet</AtomButton>
+          </div>
 
-        <div class="top__decor">
-          <img
-            class="top__decor-img"
-            src="/images/decor.png"
-            width="527"
-            height="502"
-            alt="litecoin"
-          />
+          <div class="top__decor">
+            <img
+              class="top__decor-img"
+              src="/images/decor.png"
+              width="527"
+              height="502"
+              alt="litecoin"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -71,12 +75,12 @@ const aboutCards = [
             />
           </div>
 
-          <form class="send__form" @submit.prevent>
-            <AtomButton>Send Now</AtomButton>
-          </form>
+          <MoleculeSendForm class="send__form" />
         </div>
       </div>
     </div>
+
+    <OrganismLatestTransactions class="latest-transactions" />
   </div>
 </template>
 

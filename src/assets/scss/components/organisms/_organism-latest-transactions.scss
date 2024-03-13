@@ -1,0 +1,23 @@
+@import "@/assets/scss/variables/media-breakpoints";
+
+.latest-transactions {
+  &__title {
+    margin-bottom: 13px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 32px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 16px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

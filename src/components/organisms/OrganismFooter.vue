@@ -24,7 +24,7 @@ const socialMediaItems: {
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <AtomLogo />
+        <AtomLogo class="footer__logo" />
         <div class="footer__sm">
           <a
             :href="socialMedia.url"
