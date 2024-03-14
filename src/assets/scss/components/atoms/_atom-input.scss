@@ -1,10 +1,6 @@
 @import "@/assets/scss/variables/base";
 @import "@/assets/scss/variables/colors";
 
-.input-wrapper {
-
-}
-
 .input {
   border: none;
   border-radius: $border-radius;
@@ -22,12 +18,14 @@
     color: $gray;
   }
 
-  &:focus {
-    outline: 1px solid $light-black;
-  }
-
   &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+.input-error {
+  margin-top: 4px;
+  font-weight: 500;
+  color: $red;
 }

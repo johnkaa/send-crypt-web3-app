@@ -9,8 +9,9 @@ interface Props {
   placeholder?: string
   type?: InputType
   name?: string | null
-  errorMessage?: any
+  errorMessage?: string
   disabled?: boolean
+  required?: boolean
 }
 const props = defineProps<Props>()
 
@@ -19,6 +20,8 @@ const emit = defineEmits<{
 }>()
 
 const value = useVModel(props, 'modelValue', emit)
+
+const placeholder = `${props.placeholder}${props.required ? '*' : ''}`
 </script>
 
 <template>
@@ -26,10 +29,11 @@ const value = useVModel(props, 'modelValue', emit)
     <input
       class="input"
       v-model="value"
-      :placeholder="props.placeholder"
+      :placeholder="placeholder"
       :type="props.type"
       :disabled="props.disabled"
     />
+    <div class="input-error">{{ errorMessage }}</div>
   </div>
 </template>
 

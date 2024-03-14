@@ -1,11 +1,11 @@
 @import "@/assets/scss/variables/colors";
-@import "@/assets/scss/variables/fonts";
 @import "@/assets/scss/variables/scrollbar";
 
 * {
   box-sizing: border-box;
   font-family: inherit;
   color: inherit;
+  outline: none;
 }
 
 html, body, #app {

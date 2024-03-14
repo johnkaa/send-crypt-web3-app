@@ -17,7 +17,7 @@ for (let i = 1; i <= 6; i++) {
       },
       {
         title: 'Amount',
-        value: 0.0004
+        value: '0.0004 ETH'
       },
       {
         title: 'Message',
