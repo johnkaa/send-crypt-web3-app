@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue'
+import { useProfile } from '@/store/profile'
+import { formatAddress } from '@/pkg/plugins/address-formatter'
 import AtomTitle from '@/components/atoms/AtomTitle.vue'
 import AtomButton from '@/components/atoms/AtomButton.vue'
 import MoleculeAboutCard from '@/components/molecules/MoleculeAboutCard.vue'
@@ -22,6 +25,32 @@ const aboutCards = [
     text: 'The most accurate and trusted source for market cap, valuation, and cryptocurrency information'
   }
 ]
+
+const send = ref(null)
+
+const profile = useProfile()
+
+const buttonText = computed(() => {
+  return profile.address ? 'Send Crypt' : 'Connect Wallet'
+})
+
+function connectWallet() {
+  profile.connectWallet()
+}
+
+function topButtonHandler() {
+  if (profile.address) {
+    if (!send.value) return
+
+    const sendPosition = send.value.getBoundingClientRect().y - 120
+    window.scrollTo({
+      top: sendPosition,
+      behavior: 'smooth'
+    })
+  } else {
+    connectWallet()
+  }
+}
 </script>
 
 <template>
@@ -32,7 +61,7 @@ const aboutCards = [
           <div class="top__info">
             <AtomTitle class="top__title" tag="h1">Start Sending Crypto Currency Easily</AtomTitle>
             <p class="top__text">Join the world largest crypto exchange</p>
-            <AtomButton class="top__btn">Connect Wallet</AtomButton>
+            <AtomButton class="top__btn" @click="topButtonHandler">{{ buttonText }}</AtomButton>
           </div>
 
           <div class="top__decor">
@@ -62,7 +91,7 @@ const aboutCards = [
       </div>
     </div>
 
-    <div class="send">
+    <div class="send" ref="send">
       <div class="container">
         <div class="send__inner">
           <div class="send__decor">

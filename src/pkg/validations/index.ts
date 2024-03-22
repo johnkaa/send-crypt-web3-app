@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 
 export function useStringValidation(label: string) {
-  return yup.string().required().label(label)
+  return yup.string().required().min(3).max(10).label(label)
 }
 
 export function useNumberValidation(label: string) {
@@ -9,7 +9,6 @@ export function useNumberValidation(label: string) {
     .number()
     .required()
     .min(0)
-    .max(10)
     .nullable()
     .typeError(`${label} must be a number`)
     .label(label)
@@ -24,6 +23,17 @@ export function useEthereumAddressValidation(label: string) {
     .string()
     .required()
     .test('isValidEthereumAddress', 'Invalid Ethereum address', isValidEthereumAddress)
+    .label(label)
+}
+
+export function useValueValidation(label: string) {
+  return yup
+    .number()
+    .required()
+    .min(0)
+    .max(10000)
+    .nullable()
+    .typeError(`${label} must be a number`)
     .label(label)
 }
 
