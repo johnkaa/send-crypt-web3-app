@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
-import { Web3 } from 'web3'
-import { ethers } from 'ethers'
 import { useForm } from 'vee-validate'
 import { useProfile } from '@/store/profile'
 import { sendSchema } from '@/pkg/schemas/send'

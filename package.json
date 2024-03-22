@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.9.0",
-    "ethers": "^6.11.1",
     "pinia": "^2.1.7",
     "reset-css": "^5.0.2",
     "stylelint": "^16.2.1",
@@ -22,7 +21,6 @@
     "vue": "^3.4.15",
     "vue-router": "^4.3.0",
     "vue3-toastify": "^0.2.1",
-    "web3": "^4.6.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

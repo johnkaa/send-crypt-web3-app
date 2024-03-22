@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
 import { toast } from 'vue3-toastify'
-import { Web3 } from 'web3'
 
 interface Options {
   address: string
@@ -20,11 +19,8 @@ export const useProfile = defineStore('profile', {
         )
       }
 
-      const web3 = new Web3(window.ethereum)
-      await ethereum.request({ method: 'eth_requestAccounts' })
-      const accounts = await web3.eth.getAccounts()
-
-      this.address = accounts[0]
+      const res = await ethereum.request({ method: 'eth_requestAccounts' })
+      this.address = res[0]
     }
   }
 })
