@@ -33,7 +33,7 @@ export function useValueValidation(label: string) {
     .min(0)
     .max(10000)
     .nullable()
-    .typeError(`${label} must be a number`)
+    .typeError(`${label} is a required field`)
     .label(label)
 }
 
