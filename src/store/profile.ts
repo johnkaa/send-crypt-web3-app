@@ -17,10 +17,10 @@ export const useProfile = defineStore('profile', {
         return toast.error(
           'MetaMask is not installed! Please install it to your extensions for connect your wallet.'
         )
+      } else {
+        const res = await ethereum.request({ method: 'eth_requestAccounts' })
+        this.address = res[0]
       }
-
-      const res = await ethereum.request({ method: 'eth_requestAccounts' })
-      this.address = res[0]
     }
   }
 })

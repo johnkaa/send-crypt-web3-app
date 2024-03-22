@@ -26,16 +26,17 @@ gifLink.value =
 const profile = useProfile()
 
 async function fetchSend() {
+  const ethereum = window.ethereum
+
   if (!profile.address) {
     await profile.connectWallet()
   }
 
   const { valid } = await validate()
-  if (!valid) return
+  if (!valid || !ethereum) return
 
   isLoading.value = true
   try {
-    const ethereum = window.ethereum
     await ethereum.request({
       method: 'eth_sendTransaction',
       params: [
