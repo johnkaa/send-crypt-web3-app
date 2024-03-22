@@ -67,7 +67,7 @@ function topButtonHandler() {
           <div class="top__decor">
             <img
               class="top__decor-img"
-              src="/images/decor.png"
+              src="/images/decor.webp"
               width="527"
               height="502"
               alt="litecoin"
@@ -97,7 +97,7 @@ function topButtonHandler() {
           <div class="send__decor">
             <img
               class="send__decor-img"
-              src="/images/decor.png"
+              src="/images/decor.webp"
               width="527"
               height="502"
               alt="litecoin"

@@ -4,7 +4,7 @@ const latestTransactions: Transaction[] = []
 
 for (let i = 1; i <= 6; i++) {
   latestTransactions.push({
-    img: `/images/cards/demo-${i}.gif`,
+    img: `/images/cards/demo-${i}.webm`,
     date: new Date(),
     infoFields: [
       {

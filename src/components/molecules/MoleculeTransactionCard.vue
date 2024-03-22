@@ -16,13 +16,14 @@ const dateFormatter = useDateFormatter()
 <template>
   <div class="transaction-card">
     <div class="transaction-card__top">
-      <img
+      <video
         :src="props.transaction.img"
         class="transaction-card__img"
+        autoplay
+        loop
+        muted
         width="270"
         height="270"
-        loading="lazy"
-        alt=""
       />
       <AtomBadge class="transaction-card__date">{{
         dateFormatter.formatDatetimeWithoutTimeZone(props.transaction.date)
